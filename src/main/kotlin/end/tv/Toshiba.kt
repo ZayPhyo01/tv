@@ -1,7 +1,7 @@
-package tv
+package end.tv
 
-import screen.LedScreen
-import speaker.Speaker
+import end.screen.LedScreen
+import end.speaker.Speaker
 
 class Toshiba(
     private val ledScreen: LedScreen,

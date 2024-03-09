@@ -1,4 +1,4 @@
-package speaker
+package end.speaker
 
 class Speaker {
     private var volumeLevel = 100

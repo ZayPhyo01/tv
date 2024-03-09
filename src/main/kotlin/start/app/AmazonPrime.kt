@@ -1,23 +1,20 @@
-package app
+package start.app
 
-class Netflix {
+class AmazonPrime {
 
-    fun openNetflix() {
+    fun openAmazonPrime() {
         showSplashScreen()
         showLatestMovies()
         showPopularMovieList()
     }
 
     private fun showSplashScreen() {
-        println("Netflix")
+        println("Prime ... ")
     }
 
     private fun showLatestMovies() {
         val latestMovies = listOf(
-            "House of ninja",
-            "Young Sheldon , Season 6",
             "The Last AIRBENDER",
-            "PARASYTE , The Grey",
             "Homicide , The New York"
         )
         println(latestMovies)
@@ -25,11 +22,10 @@ class Netflix {
 
     private fun showPopularMovieList() {
         val popularMovies = listOf(
-            "House of ninja",
-            "Night Agent",
-            "All of us are dead",
-            "Captivating The King",
-            "Young Sheldon"
+            "The Lord Of the ring",
+            "Walking dead",
+            "WWZ",
+            "The terminal list"
         )
         println(
             popularMovies.joinToString(
@@ -38,5 +34,9 @@ class Netflix {
                 it
             }
         )
+    }
+
+    fun exit () {
+        print("back to home")
     }
 }

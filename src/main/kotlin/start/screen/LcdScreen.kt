@@ -1,11 +1,15 @@
-package screen
+package start.screen
 
-class LedScreen(private val backLit: BackLit) {
+import end.screen.Fluorescent
+
+class LcdScreen(
+    private val fluorescent: Fluorescent
+) {
     private var brightnessLevel = 100
 
     fun reduceBrightness() {
         reduceEnergyUsage()
-        backLit.reduceIntensity()
+        fluorescent.reduceElectricCurrentSupply()
 
         if (brightnessLevel > 0)
             brightnessLevel--
@@ -13,7 +17,7 @@ class LedScreen(private val backLit: BackLit) {
 
     fun increaseBrightness() {
         increaseEnergyUsage()
-        backLit.increaseIntensity()
+        fluorescent.increaseElectricCurrentSupply()
 
         if (brightnessLevel < 100) {
             brightnessLevel++
@@ -21,7 +25,6 @@ class LedScreen(private val backLit: BackLit) {
     }
 
     fun getCurrentBrightnessLevel() = brightnessLevel
-
 
     private fun reduceEnergyUsage() {
         println("reducing energy usage ... ")

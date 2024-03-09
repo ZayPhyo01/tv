@@ -1,12 +1,14 @@
-package tv
+package end.tv
 
-import app.Netflix
-import screen.LedScreen
-import speaker.Speaker
+import end.app.AmazonPrime
+import end.app.Netflix
+import end.screen.LedScreen
+import end.speaker.Speaker
 
 class AndroidTv(
     private val ledScreen: LedScreen,
     private val netflix: Netflix,
+    private val amazonPrime: AmazonPrime,
     private val speaker: Speaker
 ) {
 
@@ -18,8 +20,16 @@ class AndroidTv(
         netflix.openNetflix()
     }
 
-    fun playBomberman() {
-        println("Bomb! , Bomb!")
+    fun openAmazonPrime() {
+        amazonPrime.openAmazonPrime()
+    }
+
+    fun exitNetflix() {
+        netflix.exit()
+    }
+
+    fun exitAmazonPrime() {
+        amazonPrime.exit()
     }
 
     fun increaseBrightness() {

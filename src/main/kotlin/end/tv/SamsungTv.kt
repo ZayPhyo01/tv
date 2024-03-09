@@ -1,7 +1,7 @@
-package tv
+package end.tv
 
-import screen.LcdScreen
-import speaker.Speaker
+import end.screen.LcdScreen
+import end.speaker.Speaker
 
 class SamsungTv(private val lcdScreen: LcdScreen, private val speaker: Speaker) {
 
