@@ -1,6 +1,6 @@
 package end.app
 
-class Netflix {
+class Netflix : MovieApp() {
 
     fun openNetflix() {
         showSplashScreen()
@@ -8,11 +8,11 @@ class Netflix {
         showPopularMovieList()
     }
 
-    private fun showSplashScreen() {
+    override fun showSplashScreen() {
         println("Netflix")
     }
 
-    private fun showLatestMovies() {
+    override fun showLatestMovies() {
         val latestMovies = listOf(
             "House of ninja",
             "Young Sheldon , Season 6",
@@ -23,7 +23,7 @@ class Netflix {
         println(latestMovies)
     }
 
-    private fun showPopularMovieList() {
+    override fun showPopularMovieList() {
         val popularMovies = listOf(
             "House of ninja",
             "Night Agent",
@@ -38,9 +38,5 @@ class Netflix {
                 it
             }
         )
-    }
-
-    fun exit () {
-        print("back to home")
     }
 }

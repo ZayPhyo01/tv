@@ -4,10 +4,10 @@ import end.screen.Fluorescent
 
 class LcdScreen(
     private val fluorescent: Fluorescent
-) {
+) : Screen() {
     private var brightnessLevel = 100
 
-    fun reduceBrightness() {
+    override fun reduceBrightness() {
         reduceEnergyUsage()
         fluorescent.reduceElectricCurrentSupply()
 
@@ -15,7 +15,7 @@ class LcdScreen(
             brightnessLevel--
     }
 
-    fun increaseBrightness() {
+    override fun increaseBrightness() {
         increaseEnergyUsage()
         fluorescent.increaseElectricCurrentSupply()
 

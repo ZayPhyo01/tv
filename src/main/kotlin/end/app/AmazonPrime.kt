@@ -1,6 +1,6 @@
 package end.app
 
-class AmazonPrime {
+class AmazonPrime : MovieApp() {
 
     fun openAmazonPrime() {
         showSplashScreen()
@@ -8,11 +8,11 @@ class AmazonPrime {
         showPopularMovieList()
     }
 
-    private fun showSplashScreen() {
+    override fun showSplashScreen() {
         println("Prime ... ")
     }
 
-    private fun showLatestMovies() {
+    override fun showLatestMovies() {
         val latestMovies = listOf(
             "The Last AIRBENDER",
             "Homicide , The New York"
@@ -20,7 +20,7 @@ class AmazonPrime {
         println(latestMovies)
     }
 
-    private fun showPopularMovieList() {
+    override fun showPopularMovieList() {
         val popularMovies = listOf(
             "The Lord Of the ring",
             "Walking dead",
@@ -34,9 +34,5 @@ class AmazonPrime {
                 it
             }
         )
-    }
-
-    fun exit () {
-        print("back to home")
     }
 }

@@ -2,10 +2,10 @@ package end.screen
 
 import end.screen.BackLit
 
-class LedScreen(private val backLit: BackLit) {
+class LedScreen(private val backLit: BackLit) : Screen() {
     private var brightnessLevel = 100
 
-    fun reduceBrightness() {
+    override fun reduceBrightness() {
         reduceEnergyUsage()
         backLit.reduceIntensity()
 
@@ -13,7 +13,7 @@ class LedScreen(private val backLit: BackLit) {
             brightnessLevel--
     }
 
-    fun increaseBrightness() {
+    override fun increaseBrightness() {
         increaseEnergyUsage()
         backLit.increaseIntensity()
 
