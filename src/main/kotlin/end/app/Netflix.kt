@@ -1,5 +1,9 @@
 package end.app
 
+//code reusable
+//polymorphism
+
+
 class Netflix : MovieApp() {
 
     fun openNetflix() {
