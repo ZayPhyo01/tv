@@ -1,20 +1,21 @@
 package end.app
 
-open class MovieApp {
 
-    open fun showSplashScreen() {
+// object should not create if class represent abstract concept
 
-    }
 
-    fun exit () {
+abstract class MovieApp {
+
+    abstract fun showSplashScreen()
+
+    fun exit() {
         print("back to home")
     }
 
-    open fun showLatestMovies() {
+    abstract fun showLatestMovies()
 
-    }
-
-    open fun showPopularMovieList() {
-
-    }
+    abstract fun showPopularMovieList()
 }
+
+//
+
